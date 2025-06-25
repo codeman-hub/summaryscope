@@ -1,0 +1,339 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Allow scrolling */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: rgb(103, 0, 0);
+}
+
+/* Header styling to align items horizontally */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center all items in the header */
+    padding: 25px 40px;
+    background-color: rgb(11, 36, 17);
+    color: rgb(255, 255, 255);
+    position: relative; /* To position identity and search container absolutely */
+}
+
+.site-header a, 
+.site-header h1 {
+    color: rgb(255, 255, 255); /* Ensure all text elements in site-header are white */
+}
+
+.site-identity {
+    position: absolute; /* Position identity element to the left */
+    left: 20px;
+}
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the navigation items */
+    flex-grow: 1;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.nav li a.active{
+   font-weight:bold;
+}
+
+.nav li a:hover{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position search container to the right */
+    right: 1px;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border: 1px solid #fff; /* White border */
+    border-radius: 4px;
+    width: 200px;
+    background-color: transparent; /* Ensure the background is transparent */
+    color: #fff; /* White text color */
+}
+
+.search-bar::placeholder {
+    color: #fff; /* White placeholder text */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove default outline */
+    border: 1px solid #fff; /* Maintain white border on focus */
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff; /* White icon color */
+}
+
+/* Contact page styles */
+.contact {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('Images/pexels-andrzej-gdula-177638374-12336393.jpg') no-repeat center center/cover;
+    opacity: 0.9; /* Adjust the opacity for transparency */
+    z-index: -1; /* Ensure the background image stays behind content */
+    background-size: cover; /* Ensure the background image covers the entire area */
+}
+
+.contact h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    color: #000000;
+   
+    
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    background: url('Images/WhatsApp\ Image\ 2024-11-03\ at\ 19.34.40_f6c1e101.jpg') no-repeat center center/cover; /* Placeholder image */
+    border: 2px solid #fff; /* White border */
+    margin-bottom: 30px;
+}
+
+.profile-summary {
+    max-width: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.profile-summary p {
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: rgb(11, 36, 17);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack ad space and footer content vertically */
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    
+}
+.footer-content a{
+    color: #fff;
+}
+.footer-content a:hover{
+    color: #ff0000ac;
+}
+.footer-content p {
+    margin: 0;
+}
+
+.ad-space {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    color: white; /* Ensure text color is white */
+    margin-bottom: 10px; /* Add some spacing below the ad space */
+}
+
+
+.contact-info p {
+    margin: 2px; /* Remove the default margin */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Close Button */
+.close-btn {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 22% auto;
+    padding: 20px;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+
+@media (max-width: 1022px) {
+
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center all items in the header */
+        padding: 34px 40px;
+        background-color: rgb(11, 36, 17);
+        color: rgb(255, 255, 255);
+        position: relative; /* To position identity and search container absolutely */
+    }
+    
+    
+    .site-navigation {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: rgb(11, 36, 17);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 50px;
+        z-index: 1000;
+    }
+    
+    .site-navigation.active {
+        display: flex;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav li {
+        margin: 10px 0;
+    }
+    
+    .search-container {
+        margin-top: 220px;
+        width: 90%;
+        
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .close-btn.active {
+        display: block;
+    }
+
+    .site-header {
+        justify-content: space-between;
+    }
+    
+    
+}
+

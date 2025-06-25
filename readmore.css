@@ -1,0 +1,359 @@
+/* Reset styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Allow scrolling */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: rgb(103, 0, 0);
+}
+
+/* Header styling to align items horizontally */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center all items in the header */
+    padding: 25px 40px;
+    background-color: rgb(11, 36, 17);
+    color: rgb(255, 255, 255);
+    position: relative; /* To position identity and search container absolutely */
+}
+
+.site-header a, 
+.site-header h1 {
+    color: rgb(255, 255, 255); /* Ensure all text elements in site-header are white */
+}
+
+.site-identity {
+    position: absolute; /* Position identity element to the left */
+    left: 20px;
+}
+
+.site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the navigation items */
+    flex-grow: 1;
+    
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav li {
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.nav li a.active{
+    font-weight:bold;
+}
+
+.nav li a:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: absolute; /* Position search container to the right */
+    right: 1px;
+}
+
+.search-bar {
+    padding: 0.5rem;
+    border: 1px solid #fff; /* White border */
+    border-radius: 4px;
+    width: 200px;
+    background-color: transparent; /* Ensure the background is transparent */
+    color: #fff; /* White text color */
+}
+
+.search-bar::placeholder {
+    color: #fff; /* White placeholder text */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove default outline */
+    border: 1px solid #fff; /* Maintain white border on focus */
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #fff; /* White icon color */
+}
+
+/* Mobile Menu (Hamburger Icon) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+/* Close Button */
+.close-btn {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 22% auto;
+    padding: 20px;
+    border-radius: 4px;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+.readmore-content {
+    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    
+}
+
+.book-summary {
+    background-color: rgba(255, 255, 255, 0.915); /* Light background for content */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.book-summary img.book-cover {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.book-summary h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.detailed-summary, .author-info, .key-quotes, .reviews, .related-books {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.related-books a{
+    font-family: cursive;
+}
+
+h3 {
+    color: #222;
+    border-bottom: 2px solid #c39a06;
+    padding-bottom: 5px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 5px solid #000000;
+    margin: 20px;
+    padding: 10px 20px;
+    font-style: italic;
+    color: #000000;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+
+/* Footer styles */
+.footer {
+    background-color: rgb(11, 36, 17);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer-content a{
+    color: #fff;
+}
+
+.footer-content a:hover{
+    color: #ff0000ac;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+.ad-space {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Purchase Links Section */
+.purchase-links {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.purchase-links h3 {
+    color: #222;
+    border-bottom: 2px solid #c39a06;
+    padding-bottom: 5px;
+}
+
+.purchase-links ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.purchase-links ul li {
+    margin: 10px 0;
+}
+
+.purchase-links ul li a {
+    color: #c39a06;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.purchase-links ul li a:hover {
+    text-decoration: underline;
+    color: #a67b04;
+}
+.book-section {
+    margin-top: 20px;
+}
+
+
+
+
+
+@media (max-width: 1022px) {
+
+    .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center all items in the header */
+        padding: 34px 40px;
+        background-color: rgb(11, 36, 17);
+        color: rgb(255, 255, 255);
+        position: relative; /* To position identity and search container absolutely */
+    }
+    
+    
+    .site-navigation {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: rgb(11, 36, 17);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 50px;
+        z-index: 1000;
+    }
+    
+    .site-navigation.active {
+        display: flex;
+    }
+    
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav li {
+        margin: 10px 0;
+    }
+    
+    .search-container {
+        margin-top: 220px;
+        width: 90%;
+        
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .close-btn.active {
+        display: block;
+    }
+
+    .site-header {
+        justify-content: space-between;
+    }
+    
+   
+}
+

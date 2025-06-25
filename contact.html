@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="one.css">
+    <title>Unlock the World of Books in Minutes</title>
+    <style>
+    .contact {
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('Images/pexels-andrzej-gdula-177638374-12336393.jpg') no-repeat center center/cover;
+    opacity: 0.9; /* Adjust the opacity for transparency */
+    z-index: -1; /* Ensure the background image stays behind content */
+    background-size: cover; /* Ensure the background image covers the entire area */
+}
+
+.contact h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    font-weight: bolder;
+    color: #000000;
+   
+    
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    background: url('Images/WhatsApp\ Image\ 2024-11-03\ at\ 19.34.40_f6c1e101.jpg') no-repeat center center/cover; /* Placeholder image */
+    border: 2px solid #fff; /* White border */
+    margin-bottom: 30px;
+}
+
+.profile-summary {
+    max-width: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.profile-summary p {
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-identity">
+            <h1>SUMMARYSCOPE</h1>
+        </div>
+         <nav class="site-navigation">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active">Contact</a></li>
+                <li><a href="readmore.html">What's New</a></li>
+                      
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search for book summaries">
+                <button class="search-btn">&#128269;</button>
+            </div>
+         </nav>
+         <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="close-btn">&times;</div>
+    </header>
+     <!-- Contact Information -->
+     <div class="contact">
+        <h1>Contact Me</h1>
+        <div class="profile">
+            <div class="profile-pic"></div> <!-- Placeholder for unknown person -->
+            <div class="profile-summary">
+                <p>Hello! I am Tridip Kalita, a passionate book enthusiast and the creator of SUMMARYSCOPE.</p>
+                <p>Looking to promote your brand or showcase your product? I offer opportunities for sponsored content and promotions to help you reach a wider audience. Get in touch to explore how we can collaborate!</p>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:tridip1kalita@gmail.com">tridip1kalita@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/tridipkalita?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BXYUvvgNIRZCWieQnwae29g%3D%3D" target="_blank">www.linkedin.com/in/tridipkalita</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="search-results" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="ad-space">
+            <!-- Ad content here -->
+            Ad Space
+        </div>
+        <div class="footer-content">
+            <p> <a href="privacypolicy.html">Privacy Policy | Terms of Service</a></p>
+        </div>
+    </footer>
+    <script src="script2.js"></script>
+</body>
